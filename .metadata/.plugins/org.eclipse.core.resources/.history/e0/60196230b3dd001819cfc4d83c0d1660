@@ -1,0 +1,28 @@
+package myTemp;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.HashMap;
+import java.util.Queue;
+import java.util.PriorityQueue;
+public class Test1018 {
+
+	public static void main(String[] args) {
+		Queue<Student> q=new PriorityQueue<Student>((e1,e2)->(e1.id-e2.id));
+		for(int i=0;i<3;i++) {
+			q.offer(new Student(i,i+"Tom"));
+		}
+		for(Student i:q) {
+			System.out.println(i.name);
+		}
+	}	
+}
+class Student{
+	String name ;
+	int id;
+	public Student(int id,String name) {
+		this.id=id;
+		this.name=name;
+	}
+}

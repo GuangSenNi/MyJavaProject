@@ -1,0 +1,71 @@
+package threadball;
+
+import java.awt.Graphics;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.Random;
+
+public class ballact extends MouseAdapter implements Runnable,KeyListener{
+	private mainUI m;
+	private int x=0,y=0;
+	private ArrayList<ball> arr;
+	private Graphics g;
+	public ballact(mainUI m,ArrayList<ball> arr) {
+		super();
+		this.m = m;
+		this.arr=arr;
+	}
+
+	public void mouseReleased(MouseEvent e) {
+		if(g==null) {
+			g=m.getGraphics();
+		}
+		x = e.getX();
+		y = e.getY();
+		ball b =new ball(x,y,m);
+		arr.add(b);
+		m.repaint();
+	}
+
+	@Override
+	public void run() {
+		// TODO 自动生成的方法存根
+		Random r=new Random();
+		int i=0;
+		while(true) {
+			if(i<5) {
+				i++;
+				ball b1 =new ball(r.nextInt(600),y,m);
+				arr.add(b1);
+			}
+			m.repaint();
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				// TODO 自动生成的 catch 块
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent arg0) {
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO 自动生成的方法存根
+		System.out.println(e.getExtendedKeyCode());
+		System.out.println(111);
+	}
+
+	
+	public void keyTyped(KeyEvent e) {
+		
+	}
+}

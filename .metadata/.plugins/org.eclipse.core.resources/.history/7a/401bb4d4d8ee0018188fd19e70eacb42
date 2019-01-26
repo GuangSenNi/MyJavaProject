@@ -1,0 +1,54 @@
+package per.ngs.gecco.dao;
+
+import java.util.List;
+
+import com.geccocrawler.gecco.annotation.Href;
+import com.geccocrawler.gecco.annotation.HtmlField;
+import com.geccocrawler.gecco.annotation.Request;
+import com.geccocrawler.gecco.annotation.Text;
+import com.geccocrawler.gecco.request.HttpRequest;
+import com.geccocrawler.gecco.spider.HtmlBean;
+
+@SuppressWarnings("serial")
+public class UrlBean implements HtmlBean{
+
+	@Request
+    private HttpRequest request;
+	
+	@Text
+	@HtmlField(cssPath="tr td:nth-child(1) a")
+	private List<String> name;
+	
+	@Href
+	@HtmlField(cssPath="tr td:nth-child(1) a")
+	private List<String> url;
+	
+	@Text
+	@HtmlField(cssPath="tr td:nth-child(2) a")
+	private List<String> time;
+
+	public List<String> getName() {
+		return name;
+	}
+
+	public void setName(List<String> name) {
+		this.name = name;
+	}
+
+	public List<String> getUrl() {
+		return url;
+	}
+
+	public void setUrl(List<String> url) {
+		this.url = url;
+	}
+
+	public List<String> getTime() {
+		return time;
+	}
+
+	public void setTime(List<String> time) {
+		this.time = time;
+	}
+	
+}

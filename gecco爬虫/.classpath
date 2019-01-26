@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="gecco-dependency/annotations-2.0.1.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/ant-1.9.4.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/ant-launcher-1.9.4.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/asm-5.0.3.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/cglib-3.2.1.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/fastjson-1.2.9.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/gecco-1.1.0.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/guava-15.0.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/javassist-3.19.0-GA.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/jmxutils-1.19.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/jsoup-1.8.3.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/reflections-0.9.10.jar"/>
+	<classpathentry kind="lib" path="gecco-dependency/rhino-1.7.7.1.jar"/>
+	<classpathentry kind="lib" path="libs/mysql-connector-java-5.1.35-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>这很江湖</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+	<link rel="stylesheet" href="assets/css/ready.css">
+	<link rel="stylesheet" href="assets/css/demo.css">
+	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<div class="logo-header">
+				<a href="index" class="logo">
+					这很江湖
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+			</div>
+			<nav class="navbar navbar-header navbar-expand-lg">
+				<div class="container-fluid">
+					
+					<form class="navbar-left navbar-form nav-search mr-md-3" action="">
+						<div class="input-group">
+							<input type="text" placeholder="Search ..." class="form-control">
+							<div class="input-group-append">
+								<span class="input-group-text">
+									<i class="la la-search search-icon"></i>
+								</span>
+							</div>
+						</div>
+					</form>
+
+					</div>
+				</nav>
+			</div>
+			<div class="sidebar">
+				<div class="scrollbar-inner sidebar-wrapper">
+					<div class="user" style="display:none">
+						<div class="photo">
+							<img src="assets/img/profile.jpg">
+						</div>
+						<div class="info">
+							<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+								<span>
+									Hizrian
+									<span class="user-level">Administrator</span>
+									<span class="caret"></span>
+								</span>
+							</a>
+							<div class="clearfix"></div>
+
+							<div class="collapse in" id="collapseExample" aria-expanded="true" style="">
+								<ul class="nav">
+									<li>
+										<a href="#profile">
+											<span class="link-collapse">My Profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="#edit">
+											<span class="link-collapse">Edit Profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="#settings">
+											<span class="link-collapse">Settings</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<ul class="nav">
+						<li class="nav-item active">
+							<a href="">
+								<i class="la la-dashboard"></i>
+								<p>中南大学</p>
+								<span class="badge badge-count"></span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a >
+								<i class="la la-table"></i>
+								<p>湖南大学</p>
+								<span class="badge badge-count"></span>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="main-panel">
+				<div class="content">
+					<div class="container-fluid">
+						<h4 class="page-title">中南大学校招信息</h4>
+						<div class="row">
+					
+							<!--my code-->
+							<div class="card" style="width:100%">
+									<div class="card-header">
+										<div class="card-title">
+													<select id="academic" onchange="findMajor()" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap; border-radius:5px;width:31%;height:30px;">
+														<option value="信息科学与工程学院">学院</option>
+														<option value="信息科学与工程学院">信息科学与工程学院</option>
+														<option value="机电工程学院">机电工程学院</option>
+														<option value="化学化工学院">化学化工学院</option>
+														<option value="商学院">商学院</option>
+														<option value="法学院">法学院</option>
+														<option value="外国语学院">外国语学院</option>														
+														<option value="建筑与艺术学院">建筑与艺术学院</option>
+														<option value="粉末冶金研究院">粉末冶金研究院</option>
+														<option value="公共管理学院">公共管理学院</option>														
+														
+														<option value="数学与统计学院">数学与统计学院</option>														
+														<option value="冶金与环境学院">冶金与环境学院</option>
+														<option value="资源与安全工程学院">资源与安全工程学院</option>														
+														<option value="物理与电子学院">物理与电子学院</option>
+														<option value="文学院">文学院</option>														
+														
+														<option value="能源科学与工程学院">能源科学与工程学院</option>														
+														<option value="马克思主义学院">马克思主义学院</option>
+														
+														<option value="资源加工与生物工程学院">资源加工与生物工程学院</option>																												
+														<option value="材料科学与工程学院">材料科学与工程学院</option>
+														<option value="航空航天学院">航空航天学院</option>
+													</select>
+													<select id="major" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;border-radius:5px;width:31%;height:30px;">
+														<option value="计算机科学与技术">专业</option>														
+														
+														
+													</select>
+													<select id="time" style="border-radius:5px;width:31%;height:30px;">
+														<option value="1">时间</option>
+														<option value="1">1日内</option>	
+														<option value="3">3日内</option>
+														<option value="7">7日内</option>
+													</select>
+													<div  style="padding:10px 0px 0px 0px;">			
+													<button id="displayNotif" class="btn btn-success" onclick="btnAction()"style="font-size:16px;line-height:0;padding:0px;width:60px;height:30px;">查询</button>
+													</div>
+										</div>
+									</div>
+									
+									<div id="displaymsg" class="card-body">
+										
+										<div class="card card-stats card-warning" style="margin-bottom:10px; border-radius:10px;">
+											<div class="card-body " >																							
+													<div class="d-flex align-items-center ">
+												<div class="numbers">
+													<h6 style="margin:0 auto;"><a style="color:white;">欢迎使用本系统</a></h6>
+													<h6 style="margin:0 auto;color:white;">wellcom to our system</h6>
+													<h6 style="margin:0 auto;color:white;"></h6>											
+												</div>
+												</div>											
+											</div>
+										</div>
+										
+										
+									</div>
+								</div>
+							
+						</div>
+					</div>
+				</div>
+				<footer class="footer">
+					<div class="container-fluid">
+						<nav class="pull-left">
+							<ul class="nav">
+								
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+										Help
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#license/#free-item">
+										Licenses
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="copyright ml-auto">
+							2018, made by <a href="#">MRBEAR</a> </div>				
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="modalUpdate" tabindex="-1" role="dialog" aria-labelledby="modalUpdatePro" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-primary">
+					<h6 class="modal-title"><i class="la la-frown-o"></i> Under Development</h6>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body text-center">									
+					<p>Currently the pro version of the <b>Ready Dashboard</b> Bootstrap is in progress development</p>
+					<p>
+						<b>We'll let you know when it's done</b></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript"> 
+	//根据学院展示专业
+	function findMajor(){
+		var academic=$("#academic option:selected").text();
+		//alert(academic);
+		var myMajor="<option value=\"计算机科学与技术\">专业</option>";
+		if(academic=="信息科学与工程学院"){
+			myMajor+=
+			"<option value=\"智能科学与技术\">智能科学与技术</option>"+
+			"<option value=\"通信工程\">通信工程</option>"+
+			"<option value=\"电子信息工程\">电子信息工程</option>"+
+			"<option value=\"物联网工程\">物联网工程</option>"+
+			"<option value=\"测控技术与仪器\">测控技术与仪器</option>"+
+			"<option value=\"电气工程及其自动化\">电气工程及其自动化</option>"+
+			"<option value=\"计算机科学与技术\">计算机科学与技术</option>"+
+			"<option value=\"信息安全\">信息安全</option>"+
+			"<option value=\"自动化\">自动化</option>"+
+			"<option value=\"不限制\">不限制</option>";			
+		}else if(academic=="粉末冶金研究院"){
+			myMajor+=
+			"<option value=\"粉体材料科学与工程\">粉体材料科学与工程</option>"+
+			"<option value=\"材料化学\">材料化学</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="公共管理学院"){
+			myMajor+=
+			"<option value=\"行政管理\">行政管理</option>"+
+			"<option value=\"社会学\">社会学</option>"+
+			"<option value=\"劳动与社会保障\">劳动与社会保障</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="化学化工学院"){
+			myMajor+=
+			"<option value=\"化学工程与工艺\">化学工程与工艺</option>"+
+			"<option value=\"制药工程\">制药工程</option>"+
+			"<option value=\"应用化学\">应用化学</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="数学与统计学院"){
+			myMajor+=
+			"<option value=\"数学与应用数学\">数学与应用数学</option>"+
+			"<option value=\"信息与计算科学\">信息与计算科学</option>"+
+			"<option value=\"统计学\">统计学</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="冶金与环境学院"){
+			myMajor+=
+			"<option value=\"环境工程\">环境工程</option>"+
+			"<option value=\"新能源材料与器件\">新能源材料与器件</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="资源与安全工程学院"){
+			myMajor+=
+			"<option value=\"采矿工程\">采矿工程</option>"+
+			"<option value=\"城市地下空间工程\">城市地下空间工程</option>"+
+			"<option value=\"安全工程\">安全工程</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="物理与电子学院"){
+			myMajor+=
+			"<option value=\"应用物理学\">应用物理学</option>"+
+			"<option value=\"电子信息科学与技术\">电子信息科学与技术</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="文学院"){
+			myMajor+=
+			"<option value=\"汉语言文学\">汉语言文学</option>"+
+			"<option value=\"广播电视学\">广播电视学</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="机电工程学院"){
+			myMajor+=
+			"<option value=\"机械设计制造及其自动化\">机械设计制造及其自动化</option>"+
+			"<option value=\"微电子制造工程\">微电子制造工程</option>"+
+			"<option value=\"车辆工程\">车辆工程</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="能源科学与工程学院"){
+			myMajor+=
+			"<option value=\"能源与动力工程\">能源与动力工程</option>"+
+			"<option value=\"建筑环境与能源应用工程\">建筑环境与能源应用工程</option>"+
+			"<option value=\"新能源科学与工程\">新能源科学与工程</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="马克思主义学院"){
+			myMajor+=
+			"<option value=\"思想政治教育\">思想政治教育</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="外国语学院"){
+			myMajor+=
+			"<option value=\"英语\">英语</option>"+
+			"<option value=\"法语\">法语</option>"+
+			"<option value=\"日语\">日语</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="建筑与艺术学院"){
+			myMajor+=
+			"<option value=\"建筑学\">建筑学</option>"+
+			"<option value=\"城市规划\">城市规划</option>"+
+			"<option value=\"艺术设计\">艺术设计</option>"+
+			"<option value=\"工业设计\">工业设计</option>"+
+			"<option value=\"音乐表演\">音乐表演</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="资源加工与生物工程学院"){
+			myMajor+=
+			"<option value=\"矿物加工工程\">矿物加工工程</option>"+
+			"<option value=\"无机非金属材料工程\">无机非金属材料工程</option>"+
+			"<option value=\"生物工程\">生物工程</option>"+
+			"<option value=\"生物技术\">生物技术</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="商学院"){
+			myMajor+=
+			"<option value=\"国际经济与贸易\">国际经济与贸易</option>"+
+			"<option value=\"金融学\">金融学</option>"+
+			"<option value=\"信息管理与信息系统\">信息管理与信息系统</option>"+
+			"<option value=\"工商管理\">工商管理</option>"+
+			"<option value=\"会计学\">会计学</option>"+
+			"<option value=\"财务管理\">财务管理</option>"+
+			"<option value=\"电子商务\">电子商务</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="法学院"){
+			myMajor+=
+			"<option value=\"法学\">法学</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="材料科学与工程学院"){
+			myMajor+=
+			"<option value=\"材料科学与工程\">材料科学与工程</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}else if(academic=="航空航天学院"){
+			myMajor+=
+			"<option value=\"航空航天工程\">航空航天工程</option>"+
+			"<option value=\"探测制导与控制技术\">探测制导与控制技术</option>"+
+			"<option value=\"不限制\">不限制</option>";
+		}
+		$("#major").html(myMajor);		
+	}
+	
+	//查找专业招聘信息
+	function btnAction(){
+		var academic=$("#academic option:selected").val();
+		var major=$("#major option:selected").val();
+		var time=$("#time option:selected").val();
+		var url="/findMsg";
+		var data0="";
+		if(major=="不限制"){
+			data0="academic-"+academic+"-"+time;
+		}else{
+			data0="major-"+major+"-"+time;
+		}
+		//alert(data0);
+		$.ajax({
+                type:'get',
+                url: url,
+                dataType : 'text',
+                //async:true,//Ĭ첽
+                data :"data0="+data0,
+				
+                //{'mydata':jsonArrayFinal}                
+                success: function(data1){
+					//alert(data1);
+					var data = JSON.parse(data1);
+					var content="";
+					var last="";
+					var m=0;
+					$.each(data, function (n, value) {
+					if(value.cname==last){
+						last=value.cname;
+						m=m+1;
+					}
+					else{
+							last=value.cname;
+							content+= "<div class=\"card card-stats card-warning\" style=\"margin-bottom:10px; border-radius:10px;\">"+
+							"<div class=\"card-body \" ><div class=\"d-flex align-items-center \"><div class=\"numbers\">"+
+							"<h6 style=\"margin:0 auto;\"><a href=\" "+value.url+"\" style=\"color:white;\">"+(n+1-m)+","+value.cname+"</a></h6>"+
+							"<h6 style=\"margin:0 auto;color:white;font-size:10px;\">"+value.localtion+"</h6>"+
+							"<h6 style=\"margin:0 auto;color:white;font-size:10px;\">"+value.ctime+"</h6>"+
+							"</div></div></div></div>";
+						}
+					});
+					$("#displaymsg").html(content);				
+                },
+                error: function(xhr,status,errMsg){
+					alert(xhr);
+                    alert(status);
+                    alert(errMsg);
+                }
+                })
+	}
+	
+	
+	</script>
+</body>
+	script src="assets/js/core/popper.min.js"></script>
+	<script src="assets/js/core/bootstrap.min.js"></script>
+	<script src="assets/js/plugin/chartist/chartist.min.js"></script>
+	<script src="assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
+	
+	<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+	<script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
+	<script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
+	<script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+	<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<script src="assets/js/ready.min.js"></script>
+	<script src="assets/js/demo.js"></script>
+
+</html>

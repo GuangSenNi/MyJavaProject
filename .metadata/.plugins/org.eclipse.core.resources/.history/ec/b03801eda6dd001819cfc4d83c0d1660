@@ -1,0 +1,23 @@
+package myTemp;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.HashMap;
+import java.util.Queue;
+import java.util.PriorityQueue;
+public class Test1018 {
+
+	public static void main(String[] args) {
+		Queue<String> q=new PriorityQueue<String>();
+		q.offer("d");
+		q.offer("e");
+		q.offer("o");
+		for(String i:q) {
+			System.out.println(i);
+		}
+	}
+
+	
+}
+

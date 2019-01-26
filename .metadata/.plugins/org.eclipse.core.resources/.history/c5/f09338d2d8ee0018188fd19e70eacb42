@@ -1,0 +1,38 @@
+package per.ngs.gecco.dao;
+
+import com.geccocrawler.gecco.annotation.Ajax;
+import com.geccocrawler.gecco.annotation.Gecco;
+import com.geccocrawler.gecco.annotation.Request;
+import com.geccocrawler.gecco.request.HttpRequest;
+import com.geccocrawler.gecco.spider.HtmlBean;
+
+@Gecco(matchUrl="http://jobsky.csu.edu.cn/Home/ArticleList/1",pipelines="HtmlListPileline")
+public class HtmlList implements HtmlBean{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Request
+    private HttpRequest request;
+	
+	@Ajax(url="http://jobsky.csu.edu.cn/Home/PartialArticleList?pageindex=2&pagesize=15&typeid=1&followingdates=-1")
+	private UrlBean urlList;
+	//#postback-content-table tr td a
+//#postback-content-table > tr:nth-child(1) > td:nth-child(1) > a
+	public HttpRequest getRequest() {
+		return request;
+	}
+
+	public void setRequest(HttpRequest request) {
+		this.request = request;
+	}
+
+	public UrlBean getUrlList() {
+		return urlList;
+	}
+
+	public void setUrlList(UrlBean urlList) {
+		this.urlList = urlList;
+	}
+	
+}

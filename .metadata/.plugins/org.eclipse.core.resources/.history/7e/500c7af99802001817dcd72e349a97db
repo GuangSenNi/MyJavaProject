@@ -1,0 +1,61 @@
+package threadball;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class mainUI extends JPanel{
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		mainUI m=new mainUI();
+		m.showUI();
+	}
+	private ballact b;
+	private ArrayList<ball> arr=new ArrayList<>() ;
+	public void showUI() {
+		JFrame jf=new JFrame("fall ball");
+		jf.setSize(600, 500);
+		jf.setDefaultCloseOperation(3);
+		jf.setLocationRelativeTo(null);
+		this.setBackground(Color.yellow);
+		jf.setFocusable(false);
+		this.setFocusable(true);//把焦点放在面板上
+		jf.add(this);
+		jf.setResizable(false);
+		jf.setVisible(true);
+		b=new ballact(this,arr);
+		this.addMouseListener(b);
+		this.addKeyListener(b);
+		Thread t1=new Thread(b);
+		t1.start();
+		
+	}
+	
+	public void paint(Graphics g) {
+		super.paint(g);
+		ball b,b1;
+		for(int i=0;i<arr.size();i++) {
+			if(arr.get(i)!=null) {
+			b=arr.get(i);
+			b.move();
+			g.fillOval(b.getX(), b.getY(), 20, 20);	
+			for(int j=0;j<i;j++) {
+				if(arr.get(j)!=null) {
+				b1=arr.get(j);
+				if(Math.abs(b1.getX()-b.getX())<10&&Math.abs(b1.getY()-b.getY())<10) {
+					arr.set(i, null);
+					arr.set(j,null);
+				}
+			}
+			}
+			}	
+		}
+		
+		
+	}
+
+}

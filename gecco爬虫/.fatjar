@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Fri Nov 23 18:36:09 CST 2018
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=E\:\\Temp\\mygecco.jar
+manifest.mergeall=true
+manifest.mainclass=per.ngs.gecco.main.Main
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=
+includes=<inc|gecco\u722C\u866B/src>

@@ -1,0 +1,12 @@
+package myTemp;
+
+public class EightQueue {
+
+	public static void main(String[] args) {
+		// 
+	}
+	static int[] chessBoard;
+	
+	
+
+}

@@ -1,0 +1,39 @@
+package myTemp;
+
+public class KMP {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		KMP kmp=new KMP();
+		System.out.println(kmp.MyKmp("abcdad", "df"));
+	}
+	//s1为原串 s2为待匹配串
+	int MyKmp(String s1,String s2) {
+		int i=0,j=0;
+		int[] next=initNext(s2);
+		while(i<s1.length()&&j<s2.length()) {
+			if(j==-1||s1.charAt(i)==s2.charAt(j)) {
+				i++;
+				j++;
+			}else {
+				j=next[j];
+			}
+		}
+		if(j==s2.length())
+			return i-j;
+		return -1;
+	}
+	//生成next数组
+	int[] initNext(String str) {
+		int[] next=new int[str.length()];
+		next[0]=-1;
+		int k=-1,j=1;
+		while(j<str.length()) {
+			if(k==-1||str.charAt(k)==str.charAt(j)) 
+				next[j++]=++k;
+			else
+				k=next[k];
+		}
+		return next;
+	}
+}
